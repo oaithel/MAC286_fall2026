@@ -15,4 +15,13 @@ it throws an exception.
 - Write a main where you test your class.
  */
 public class OurArray {
+    //declare a variable for an array of integers
+
+    //declare a variable for size
+
+    //defualt constructor, create an array of 10 integers. Set size to 0
+
+    //constructor that accepts an initial capacity for the array. Create an array
+    //of that capacity and set size to 0
+
 }

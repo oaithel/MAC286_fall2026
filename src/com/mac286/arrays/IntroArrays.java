@@ -5,6 +5,7 @@ public class IntroArrays {
         //An array is a collection of variables that can be accessed using an index.
         //To define an array we use the following: type[] arrayName = ...
         int[] Ar = {-2, -5, -7, -8}; //this is a constant array
+        int[] array = new int[10]; //creates an array of 10 integers
         System.out.println("The length is: " + Ar.length);
         System.out.println("The value of the third element is: " + Ar[2]);
         //display all elements of the array in the following form: [-2, -5, -7, -8]
