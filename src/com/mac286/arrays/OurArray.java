@@ -44,6 +44,14 @@ public class OurArray {
         array[size] = e;
         size++;
     }
+    public int remove(){
+        if(this.isEmpty()){
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        int save = array[size-1];//save the last element
+        size--;//decrease the size
+        return save;//return the saved last element.
+    }
     public String toString(){
         if(this.isEmpty()){
             return "[]";
