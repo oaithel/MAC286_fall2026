@@ -52,6 +52,22 @@ public class OurArray {
         size--;//decrease the size
         return save;//return the saved last element.
     }
+    public void addFirst(int e){
+        //if full resize
+        //push all elements up by one location starting at size-1 down to 0
+
+        //add e at index 0
+
+        //increase the size
+    }
+    public int removeFirst(){
+        //if empty throw an exception
+        //save the first element
+        //push all elements down by one location starting at index 1 all the way up
+        //to index size-1
+        //decrease the size
+        //return the saved element.
+    }
     public String toString(){
         if(this.isEmpty()){
             return "[]";
