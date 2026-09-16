@@ -52,22 +52,75 @@ public class OurArray {
         size--;//decrease the size
         return save;//return the saved last element.
     }
+    public void addLast(int e){
+        this.add(e);
+    }
+    public int removeLast(){
+        return this.remove();
+    }
     public void addFirst(int e){
         //if full resize
+        if(size == array.length){
+            int[] newArray = new int[array.length*2];
+           for(int i = 0; i < size; i++){
+               newArray[i] = array[i];
+           }
+           array = newArray;
+        }
         //push all elements up by one location starting at size-1 down to 0
-
+        for(int i = size-1; i >= 0; i--){
+            array[i+1] = array[i];
+        }
         //add e at index 0
-
+        array[0] = e;
         //increase the size
+        size++;
     }
     public int removeFirst(){
         //if empty throw an exception
-
+        if(this.isEmpty()){
+            throw new ArrayIndexOutOfBoundsException();
+        }
         //save the first element
+        int save = array[0];
         //push all elements down by one location starting at index 1 all the way up
         //to index size-1
+        for(int i = 1; i < size; i++){
+            array[i-1] = array[i];
+        }
         //decrease the size
+        size--;
         //return the saved element.
+        return save;
+    }
+    //TODO: this adds e at specific index ind
+    public void add(int e, int ind){
+        //if ind is not valid index, index >= 0 and index <= size
+        //throw exception
+
+        //push all elements up by one location starting from the last
+        //all the way down to index ind.
+
+        //add e at index ind
+
+        //increase the size
+    }
+    //TODO: remove element at index ind
+    public int remove(int ind){
+        //if index ind is not valid throw an exception. index >= 0 and index < size
+
+        //save element at index ind
+
+        //bring down all elements by one location starting at ind up to the last one.
+
+        //decrease size
+        //return saved element.
+
+    }
+    //TODO: method that returns element at specific index.
+    public int get(int ind){
+        //if the index is invalid throw exception
+        //return the element at index ind.
     }
     public String toString(){
         if(this.isEmpty()){

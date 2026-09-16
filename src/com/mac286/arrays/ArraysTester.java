@@ -12,9 +12,20 @@ public class ArraysTester {
         System.out.println("A: " + A);
         System.out.println("calling remove(): " + A.remove());
         System.out.println("A: " + A);
-        System.out.println("calling remove(): " + A.remove());
+        A.addFirst(-11);
+        System.out.println("A: " + A);
+        int num = A.removeFirst();
+        System.out.println("removing the first: " + num);
         System.out.println("A: " + A);
 
+        //TODO: Test add at specific index method and remove at specific index method.
+
+        //TODO: add element using the different add methods so that at the end you have at
+        //least 8 and more than you day of birth elements in the array.
+
+        //TODO: test method get
+
+        //TODO: in one instruction move element at index 7 to index 3.
 
     }
 }
