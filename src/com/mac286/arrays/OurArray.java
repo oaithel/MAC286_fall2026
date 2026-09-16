@@ -62,6 +62,7 @@ public class OurArray {
     }
     public int removeFirst(){
         //if empty throw an exception
+
         //save the first element
         //push all elements down by one location starting at index 1 all the way up
         //to index size-1
