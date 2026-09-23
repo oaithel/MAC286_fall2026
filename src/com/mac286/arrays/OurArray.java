@@ -15,20 +15,20 @@ it throws an exception.
 - Write a main where you test your class.
  */
 import java.util.Arrays;
-public class OurArray {
+public class OurArray <T>{
     //declare a variable for an array of integers
-    private int[] array;
+    private T[] array;
     //declare a variable for size
     private int size;
     //default constructor, create an array of 10 integers. Set size to 0
     public OurArray() {
-        array = new int[10];
+        array = (T[]) new Object[10];
         size = 0;
     }
     //constructor that accepts an initial capacity for the array. Create an array
     //of that capacity and set size to 0
     public OurArray(int c) {
-        array = new int[c];
+        array = (T[]) new Object[c];
         size = 0;
     }
     public int size(){
@@ -37,31 +37,31 @@ public class OurArray {
     public boolean isEmpty(){
         return (size == 0);
     }
-    public void add(int e){
+    public void add(T e){
         if(size == array.length){
            array = Arrays.copyOf(array, array.length*2);
         }
         array[size] = e;
         size++;
     }
-    public int remove(){
+    public T remove(){
         if(this.isEmpty()){
             throw new ArrayIndexOutOfBoundsException();
         }
-        int save = array[size-1];//save the last element
+        T save = array[size-1];//save the last element
         size--;//decrease the size
         return save;//return the saved last element.
     }
-    public void addLast(int e){
+    public void addLast(T e){
         this.add(e);
     }
-    public int removeLast(){
+    public T removeLast(){
         return this.remove();
     }
-    public void addFirst(int e){
+    public void addFirst(T e){
         //if full resize
         if(size == array.length){
-            int[] newArray = new int[array.length*2];
+            T[] newArray = (T[]) new Object[array.length*2];
            for(int i = 0; i < size; i++){
                newArray[i] = array[i];
            }
@@ -76,13 +76,13 @@ public class OurArray {
         //increase the size
         size++;
     }
-    public int removeFirst(){
+    public T removeFirst(){
         //if empty throw an exception
         if(this.isEmpty()){
             throw new ArrayIndexOutOfBoundsException();
         }
         //save the first element
-        int save = array[0];
+        T save = array[0];
         //push all elements down by one location starting at index 1 all the way up
         //to index size-1
         for(int i = 1; i < size; i++){
@@ -95,7 +95,7 @@ public class OurArray {
     }
 
     //TODO: this adds e at specific index ind
-    public void add(int ind, int e){
+    public void add(int ind, T e){
         if(size == array.length){
             array = Arrays.copyOf(array, array.length*2);
         }
@@ -115,13 +115,13 @@ public class OurArray {
         size++;
     }
     //TODO: remove element at index ind
-    public int remove(int ind){
+    public T remove(int ind){
         //if index ind is not valid throw an exception. index >= 0 and index < size
         if(ind < 0 || ind >= size){
             throw new ArrayIndexOutOfBoundsException("Invalid index");
         }
         //save element at index ind
-        int save = array[ind];
+        T save = array[ind];
         //push all elements down by one location starting at index (ind+1) all the way up
         //to index size-1
         for(int i = ind+1; i < size; i++){
@@ -133,7 +133,7 @@ public class OurArray {
         return save;
     }
     //TODO: method that returns element at specific index.
-    public int get(int ind){
+    public T get(int ind){
         //if the index is invalid throw exception
         if(ind < 0 || ind >= size){
             throw new ArrayIndexOutOfBoundsException("Invalid index");

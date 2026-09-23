@@ -5,7 +5,7 @@ import java.util.Vector;
 public class ArraysTester {
     public static void main(String[] args) {
         //create an object OurArray, add to it -2, -5, -7 and -9
-        OurArray A = new OurArray(5);//the array inside the object has capacity of 5
+        OurArray<Integer> A = new OurArray<Integer>(5);//the array inside the object has capacity of 5
         A.add(-2);
         A.add(-5);
         A.add(-7);
@@ -42,6 +42,8 @@ public class ArraysTester {
         //TODO: in one instruction move element at index 5 to index 3.
         A.add(3, A.remove(5));
         System.out.println("A: " + A);
+
+
 
     }
 }
