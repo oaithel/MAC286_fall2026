@@ -5,8 +5,8 @@ public class PracticeArrays {
     // and generates randomly an array of that size of integers between -max and +max
 
     public static void main(String[] args) {
-        //TODO: Create an array of 20 random integers using the static
-        //method above.
+        //TODO: Create an array of 20 random integers between -300 and +300
+        // using the static method above.
         //display the content of the array.
 
         //using an OurArray object for help, reorganize the original array so
