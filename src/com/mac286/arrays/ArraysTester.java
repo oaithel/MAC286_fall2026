@@ -43,6 +43,15 @@ public class ArraysTester {
         A.add(3, A.remove(5));
         System.out.println("A: " + A);
 
+        //TODO: Create an array of Strings
+        //add few strings using all add methods, for at least 6 strings.
+
+        //display your array
+        //remove the second string
+
+        //display the array
+
+        //swap strings at index 2 and 4
 
 
     }
