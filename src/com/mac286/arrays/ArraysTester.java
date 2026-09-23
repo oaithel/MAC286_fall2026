@@ -43,13 +43,31 @@ public class ArraysTester {
         A.add(3, A.remove(5));
         System.out.println("A: " + A);
 
-        //TODO: Create an array of Strings
+        //TODO: Create an OurArray of Strings
+        OurArray<String> S = new OurArray<>();
         //add few strings using all add methods, for at least 6 strings.
+        S.add("Hi");
+        S.addFirst("How");
+        S.addLast("Are");
+        S.add(2, "fine");
+        S.add(3, "hola");
+        S.add(0, "There");
         //display your array
+        System.out.println("S: " + S);
         //remove the second string
+        System.out.println("removind the second string: " + S.remove(1));
+        System.out.println("S: " + S);
         //display the array
         //swap strings at index 2 and 4
+        S.add(2, S.remove(4));
+        //System.out.println("S: " + S);
+        S.add(4, S.remove(3));
+        System.out.println("S: " + S);
         //move the first string to the last in one instruction
+        S.addLast(S.removeFirst());
+        System.out.println("S: " + S);
         //In one instruction duplicate the string at index 2 into index 4
+        S.add(4, S.get(2));
+        System.out.println("S: " + S);
     }
 }
