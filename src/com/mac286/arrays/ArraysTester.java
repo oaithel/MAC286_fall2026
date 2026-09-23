@@ -53,6 +53,8 @@ public class ArraysTester {
 
         //swap strings at index 2 and 4
 
+        //move the first string to the last in one instruction
 
+        //In one instruction duplicate the string at index 2 into index 4
     }
 }
