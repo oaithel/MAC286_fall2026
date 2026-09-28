@@ -58,7 +58,8 @@ public class PracticeStacks {
             mainStack.push(positives.pop());
         }
         System.out.println("Before S: " + mainStack);
-        //generate another stack of 20 integers
+
+        //TODO: generate another stack of 20 integers
 
         //display it (before)
 
