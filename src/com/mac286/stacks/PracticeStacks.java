@@ -12,6 +12,13 @@ Example: [-3, 4, -9, 16, -7, -10, 26, 5] The stack will be reorganized to
 [-3, -9, -7, -10, 4, 16, 28, 5] (the relative order is kept)
 1- Using two additional stacks for help (total of three stacks)
 2- Same problem using only one OurArray for help. Keep the order.
+
+to empty a stack we use a while loop
+while(!S.isEmpty()){
+        ....
+        S.pop();
+        ....
+}
  */
 public class PracticeStacks {
 }
