@@ -141,6 +141,13 @@ public class OurArray <T>{
         //return the element at index ind.
         return array[ind];
     }
+    public void set(int ind, T e){
+        //if the index is invalid throw exception
+        if(ind < 0 || ind >= size){
+            throw new ArrayIndexOutOfBoundsException("Invalid index");
+        }
+        array[ind] = e;
+    }
     public String toString(){
         if(this.isEmpty()){
             return "[]";
