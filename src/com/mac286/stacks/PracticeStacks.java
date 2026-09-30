@@ -70,5 +70,18 @@ public class PracticeStacks {
 
         //empty theOurArray object back into the stack in a way the stack is
         //reorganized as expected.
+
+        //TODO: generate another stack of 20 integers
+
+        //display it (before)
+
+        //create an OurQueue object
+
+        //empty the stack into the queue
+
+        //emptythe queue back into the stack. You may have to use multiple loops.
+        //for instance if the front is negative remove it and push it to the stack
+        //if positive remove it and put it to the back, untill only positive
+        //numbers are left in the queue then empty the queue back in the stack.
     }
 }
