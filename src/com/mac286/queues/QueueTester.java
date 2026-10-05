@@ -21,7 +21,7 @@ public class QueueTester {
         System.out.println("Q: " + Q);
 
         //Create a Queue of Strings and a Stack of Strings.
-        OurQueue<String> QS = new OurQueue<>();
+        CircularQueue<String> QS = new CircularQueue<>();
         OurStack<String> S = new OurStack<>();
         //add three strings to the queue and three to the stack.
         //display both.
