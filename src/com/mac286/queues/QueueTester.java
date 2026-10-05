@@ -7,7 +7,7 @@ import java.util.Queue;
 
 public class QueueTester {
     public static void main(String[] args) {
-        OurQueue<Integer> Q = new OurQueue<>();
+        CircularQueue<Integer> Q = new CircularQueue<>();
         Q.add(-2);
         Q.add(-5);
         Q.add(-3);
@@ -15,6 +15,10 @@ public class QueueTester {
         System.out.println("Removing: " + Q.remove());
         System.out.println("Q: " + Q);
         System.out.println("The first element: " + Q.peek());
+        Q.add(-9);
+        Q.add(-11);
+        Q.add(-13);
+        System.out.println("Q: " + Q);
 
         //Create a Queue of Strings and a Stack of Strings.
         OurQueue<String> QS = new OurQueue<>();
