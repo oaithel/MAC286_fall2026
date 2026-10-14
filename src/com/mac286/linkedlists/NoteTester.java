@@ -20,5 +20,26 @@ public class NoteTester {
         //N2 is N1.getNext(), and N1 is N3.getNext() therefore
         //N2 is N3.getNext().getNext()
         System.out.println("N2: " + N3.getNext().getNext());
+        //Rename N3/ create a reference to N3 call it first.
+        //Rename N2/ create a refrence to N2 call it last
+        //Create Node N4 with value -13 add it at the front of N3, make first refer to it
+
+        //create node N5 with value -8 and connect it to N2 as the last node.
+
+        //Display all nodes one by one using only reference to first.
+
+        //create Node N6 with value -6 add it to the list between N3 and N1.
+
+        //Display all nodes one by one using only reference to first.
+/* Later
+        //remove Node N1 fro the list.
+
+        //Display all nodes one by one using only reference to first.
+
+        //remove the first node and update first.
+
+        //Display all nodes one by one using only reference to first.
+
+ */
     }
 }
