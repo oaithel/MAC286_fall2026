@@ -135,8 +135,9 @@ public class PostFix {
         }
         return postFix;
     }
+    //TODO: HW
     public double evaluate(){
-        if(postFix.isEmpty()){
+        if(postFix == null || postFix.isEmpty()){
             generatePostFix();
             if(postFix.isEmpty()){
                 System.out.println("Invalid expression");
@@ -150,19 +151,56 @@ public class PostFix {
             if(isOperator(item)){
                 //we assuming only binary operators
                 //there has to be two items in the stack otherwise there is a problem
-
+                if(stack.size() < 2){
+                    return NaN;
+                }
                 //pop one operator from the stack call it second
-
+                String secondStr = stack.pop();
                 //pop another one call it first.
-
+                String firstStr = stack.pop();
                 //convert both first and second to double (they are strings)
-
+                double first = Double.parseDouble(firstStr);
+                double second = Double.parseDouble(secondStr);
                 //perform the operation first op second. Convert the result to String and
-                //push it to stack.
+                switch(item){
+                    case "+": {
+                        double result = first + second;
+                        stack.push(Double.toString(result));
+                        break;
+                    }
+                    case "-": {
+                        double result = first - second;
+                        stack.push(Double.toString(result));
+                        break;
+                    }
+                    case "*": {
+                        double result = first * second;
+                        stack.push(Double.toString(result));
+                        break;
+                    }
+                    case "/": {
+                        if (second == 0) {
+                            return NaN;
+                        }
+                        double result = first / second;
+                        stack.push(Double.toString(result));
+                        break;
+                    }
+                    default:
+                        System.out.println("We should never get here!!!!");
+
+                }
+            }else{
+                //item is an operand push it to the stack
+                stack.push(item);
             }
         }
         //At the end there should be only one result in the stack.
+        if(stack.size() != 1){
+            return NaN;
+        }
         //covert it to double and return it.
+        return Double.parseDouble(stack.pop());
     }
 }
 
