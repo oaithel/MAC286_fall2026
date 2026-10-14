@@ -21,13 +21,55 @@ public class NoteTester {
         //N2 is N3.getNext().getNext()
         System.out.println("N2: " + N3.getNext().getNext());
         //Rename N3/ create a reference to N3 call it first.
+        Node<Integer> first = N3;
         //Rename N2/ create a refrence to N2 call it last
+        Node<Integer> last = N2;
         //Create Node N4 with value -13 add it at the front of N3, make first refer to it
-
+        Node<Integer> N4 = new Node<>(-13, first);
+        first = N4;
         //create node N5 with value -8 and connect it to N2 as the last node.
-
+        Node<Integer> N5 = new Node<>(-8);
+        last.setNext(N5);
+        last = N5;
         //Display all nodes one by one using only reference to first.
+        Node<Integer> temp = first;
+        int i = 0;
+        System.out.println("Node" + i + ": " + temp);
+        //move to the next node
+        i++;
+        System.out.println("Node" + i + ": " + temp.getNext());
+        i++;
+        System.out.println("Node" + i + ": " + temp.getNext().getNext());
+        i++;
+        System.out.println("Node" + i + ": " + temp.getNext().getNext().getNext());
+        i++;
+        System.out.println("Node" + i + ": " + temp.getNext().getNext().getNext().getNext());
+       //We can use the above as follows:
+        i = 0;
+        System.out.println("Node" + i + ": " + temp);
+        //move to the next node
+        i++;
+        temp = temp.getNext();
+        System.out.println("Node" + i + ": " + temp);
+        i++;
+        temp = temp.getNext();
+        System.out.println("Node" + i + ": " + temp);
+        i++;
+        temp = temp.getNext();
+        System.out.println("Node" + i + ": " + temp);
+        i++;
+        temp = temp.getNext();
+        System.out.println("Node" + i + ": " + temp);
 
+        System.out.println("--------------Use a loop ----------");
+        temp = first;
+        i = 0;
+        while(temp != null){
+            System.out.println("Node" + i + ": " + temp);
+            //go to the next
+            temp = temp.getNext();
+        }
+//TODO: HW7
         //create Node N6 with value -6 add it to the list between N3 and N1.
 
         //Display all nodes one by one using only reference to first.
