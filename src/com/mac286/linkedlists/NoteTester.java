@@ -82,6 +82,8 @@ public class NoteTester {
 
         //Display all nodes one by one using only reference to first.
 
+        //Remove the last and display all the nodes.
+
  */
     }
 }
