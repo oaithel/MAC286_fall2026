@@ -6,7 +6,7 @@ public class OurList <T>{
     private Node<T> head, tail;
     private int size;
 
-    public OurList(){
+public OurList(){
         head = tail = null;
         size = 0;
     }
@@ -28,11 +28,14 @@ public class OurList <T>{
         }
         //set next of tail to new node
         tail.setNext(n);
+        //update tail to new node
+        tail = n;
         size++;
 
     }
     public T remove(){
         //removes the last element and returns it
+        return null;
     }
     public void addLast(T e){
         this.add(e);
@@ -42,11 +45,19 @@ public class OurList <T>{
     }
     //adds e at the head of the list
     public void addFirst(T e){
+    //if empty just call add
+
+        //make new node n
+        //set next of n to head
+        //set head to new node
+        //increase size
 
     }
     //removes the first of the list and returns it
     public T removeFirst(){
-        return null;
+        //if empty throw an exception
+        //save data at head
+
     }
 
     //this adds e at specific index ind
