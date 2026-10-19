@@ -35,7 +35,7 @@ public OurList(){
     }
     public T remove(){
         //removes the last element and returns it
-        return null;
+        return remove(size-1);
     }
     public void addLast(T e){
         this.add(e);
@@ -46,37 +46,78 @@ public OurList(){
     //adds e at the head of the list
     public void addFirst(T e){
     //if empty just call add
-
+        if(this.isEmpty()){
+            this.add(e);
+            return;
+        }
         //make new node n
+
+        Node<T> n = new Node<>(e);
         //set next of n to head
+        n.setNext(head);
         //set head to new node
+        head = n;
         //increase size
+        size++;
 
     }
     //removes the first of the list and returns it
     public T removeFirst(){
         //if empty throw an exception
+        if(this.isEmpty()){
+            throw new IndexOutOfBoundsException();
+        }
         //save data at head
-
+        T save = head.getData();
+        head = head.getNext();
+        size--;
+        if(size == 0){
+            head = tail = null;
+        }
+        return save;
     }
-
+    //TODO: HW 8 complete the code and test with your own data.
     //this adds e at specific index ind
     public void add(int ind, T e){
+        //if index is not valid, throw outof bounds exception
 
+        //have temp refer to the first node.
+        //move temp ind-1 times forward
+
+        //make new node with e
+        //set next of new node to next of temp
+
+        //set next of temp to new node
+        //increase size.
     }
     //remove element at index ind
     public T remove(int ind){
+        //if index is invalid throw outofbounds exception
 
+        //have temp refer to head
+        //move temp forward ind-1 times
+        //save the data of the node next of temp
+        //set next of temp to the next of next of temp.
+        //if ind == size-1, update tail to temp
+        //decrease size
+        //if size == 0 update head and tail
+        //return saved data.
 
         return null;
     }
     //method that returns element at specific index.
     public T get(int ind){
-
+        //if index is invalid throw ourof bounds exception
+        //have temp refer to head
+        //move temp forward ind times
+        //return data at temp.
         return null;
     }
     public void set(int ind, T e){
-
+        //if index is invalid throw ourof bounds exception
+        //have temp refer to head
+        //move temp forward ind times
+        //update data at temp to e.
     }
     //TODO:
     public String toString(){

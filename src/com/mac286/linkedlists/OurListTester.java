@@ -11,5 +11,10 @@ public class OurListTester {
         L.add(-9);
         //display it.
         System.out.println("L: " + L);
+        L.addFirst(-13);
+        L.addFirst(-17);
+        System.out.println("L: " + L);
+        System.out.println("removing first: " + L.removeFirst());
+        System.out.println("L: " + L);
     }
 }
