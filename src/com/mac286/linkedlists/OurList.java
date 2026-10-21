@@ -80,44 +80,93 @@ public OurList(){
     //this adds e at specific index ind
     public void add(int ind, T e){
         //if index is not valid, throw outof bounds exception
-
+        if(ind <0 || ind > size){
+            throw new IndexOutOfBoundsException();
+        }
+        if(ind == 0){
+            this.addFirst(e);
+            return;
+        }
+        if(ind == size){
+            //add at the back
+            this.addLast(e);
+            return;
+        }
         //have temp refer to the first node.
+        Node<T> temp = head;
         //move temp ind-1 times forward
-
+        for(int i =0; i < ind-1; i++){
+            temp = temp.getNext();
+        }
         //make new node with e
+        Node<T> n = new Node<>(e);
         //set next of new node to next of temp
-
+        n.setNext(temp.getNext());
         //set next of temp to new node
+        temp.setNext(n);
         //increase size.
+        size++;
     }
     //remove element at index ind
     public T remove(int ind){
         //if index is invalid throw outofbounds exception
-
-        //have temp refer to head
-        //move temp forward ind-1 times
+        if(ind < 0 || ind > size-1){
+            throw new IndexOutOfBoundsException();
+        }
+        if(ind == 0){
+            return this.removeFirst();
+        }
+        //have temp refer to the first node.
+        Node<T> temp = head;
+        //move temp ind-1 times forward
+        for(int i =0; i < ind-1; i++){
+            temp = temp.getNext();
+        }
         //save the data of the node next of temp
+        T save = temp.getNext().getData();
         //set next of temp to the next of next of temp.
+        temp.setNext(temp.getNext().getNext());
         //if ind == size-1, update tail to temp
+        if(ind == size-1){
+            tail = temp;
+        }
         //decrease size
+        size--;
         //if size == 0 update head and tail
+        if(size == 0){
+            head = tail = null;
+        }
         //return saved data.
-
-        return null;
+        return save;
     }
     //method that returns element at specific index.
     public T get(int ind){
         //if index is invalid throw ourof bounds exception
+        if(ind < 0 || ind > size-1){
+            throw new IndexOutOfBoundsException();
+        }
         //have temp refer to head
         //move temp forward ind times
+        Node<T> temp = head;
+        for(int i =0; i < ind; i++){
+            temp = temp.getNext();
+        }
         //return data at temp.
-        return null;
+        return temp.getData();
     }
     public void set(int ind, T e){
         //if index is invalid throw ourof bounds exception
+        if(ind < 0 || ind > size-1){
+            throw new IndexOutOfBoundsException();
+        }
         //have temp refer to head
         //move temp forward ind times
+        Node<T> temp = head;
+        for(int i =0; i < ind; i++){
+            temp = temp.getNext();
+        }
         //update data at temp to e.
+        temp.setData(e);
     }
     //TODO:
     public String toString(){
