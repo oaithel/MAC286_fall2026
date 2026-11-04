@@ -7,7 +7,8 @@ When you remove, the smallest will be removed from the queue first.
  */
 public class HeapTester {
     public static void main(String[] args) {
-        PriorityQueue<Integer> Q = new PriorityQueue<>();
+        //PriorityQueue<Integer> Q = new PriorityQueue<>();
+        OurHeap<Integer> Q = new OurHeap<>();
         Q.add(8);
         Q.add(5);
         Q.add(7);
@@ -20,8 +21,8 @@ public class HeapTester {
         Q.add(2);
         Q.add(10);
         System.out.println("Q: " + Q);
-        System.out.println("polling: " + Q.poll());
-        System.out.println("Q: " + Q);
+       // System.out.println("polling: " + Q.poll());
+       // System.out.println("Q: " + Q);
 
     }
 }
