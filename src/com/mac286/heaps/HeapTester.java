@@ -21,8 +21,10 @@ public class HeapTester {
         Q.add(2);
         Q.add(10);
         System.out.println("Q: " + Q);
-       // System.out.println("polling: " + Q.poll());
-       // System.out.println("Q: " + Q);
+        System.out.println("polling: " + Q.poll());
+        System.out.println("Q: " + Q);
+        System.out.println("polling: " + Q.poll());
+        System.out.println("Q: " + Q);
 
     }
 }
