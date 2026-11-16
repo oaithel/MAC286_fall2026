@@ -2,6 +2,8 @@ package com.mac286.heaps;
 
 import com.mac286.linkedlists.OurList;
 
+import java.util.Arrays;
+
 public class OurHeap <T extends Comparable<T>>{
     private T[] H;
     private int size;
@@ -17,6 +19,10 @@ public class OurHeap <T extends Comparable<T>>{
         return (size == 0);
     }
     public void add(T e){
+        //if full resize
+        if(size == H.length){
+            H = Arrays.copyOf(H, H.length*2);
+        }
         //if empty then add e at index 0 and set seize to 1, return.
         if(this.isEmpty()){
             H[0] = e;
