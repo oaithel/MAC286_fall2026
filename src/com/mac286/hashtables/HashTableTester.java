@@ -17,4 +17,9 @@ public class HashTableTester {
         System.out.println("put returns: " + HT.put(102, "ByeBye"));
         System.out.println("HT: " + HT);
     }
+    //TODO: HW implement get method (read the slides the algo is there)
+    public T get(K key){
+
+        return null;
+    }
 }
